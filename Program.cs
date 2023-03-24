@@ -1,4 +1,5 @@
 ﻿using csharp_lista_indirizzi;
 
-var indirizzi = Parser.Read();
-Parser.Write(indirizzi);
+var addresses = Saver.Read();
+
+Saver.Write(addresses);
