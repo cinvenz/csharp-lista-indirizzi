@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_lista_indirizzi
 {
-    public static class Saver
+    public static class Parser
     {
         public const string InputFile = "..\\..\\..\\addresses.csv";
         public const string OutputFile = "..\\..\\..\\output.txt";
@@ -26,19 +26,19 @@ namespace csharp_lista_indirizzi
 
                 var chunks = line.Split(',')!;
 
-                string name;
-                string surname;
-                string street;
-                string city;
-                string province;
-                string zip;
+                //string name;
+                //string surname;
+                //string street;
+                //string city;
+                //string province;
+                //string zip;
 
-                name = chunks[0];
-                surname = chunks[1];
-                street = chunks[2];
-                city = chunks[3];
-                province = chunks[4];
-                zip = chunks[5];
+                var name = chunks[0];
+                var surname = chunks[1];
+                var street = chunks[2];
+                var city = chunks[3];
+                var province = chunks[4];
+                var zip = chunks[5];
 
                 var address = new Address(name, surname, street, city, province, zip);
                 addresses.Add(address);
