@@ -23,22 +23,38 @@ namespace csharp_lista_indirizzi
 
                 if (line is null) return addresses;
 
-
                 var chunks = line.Split(',')!;
 
-                //string name;
-                //string surname;
-                //string street;
-                //string city;
-                //string province;
-                //string zip;
+                string name;
+                string secondName;
+                string surname;
+                string street;
+                string city;
+                string province;
+                string zip;
 
-                var name = chunks[0];
-                var surname = chunks[1];
-                var street = chunks[2];
-                var city = chunks[3];
-                var province = chunks[4];
-                var zip = chunks[5];
+                if (chunks.Length == 6)
+                {
+                    name = chunks[0];
+                    surname = chunks[1];
+                    street = chunks[2];
+                    city = chunks[3];
+                    province = chunks[4];
+                    zip = chunks[5];
+                }
+
+                else
+                {
+                    name = chunks[0];
+                    secondName = chunks[1];
+                    surname = chunks[2];
+                    street = chunks[3];
+                    city = chunks[4];
+                    province = chunks[5];
+                    zip = chunks[6];
+                }
+        
+
 
                 var address = new Address(name, surname, street, city, province, zip);
                 addresses.Add(address);

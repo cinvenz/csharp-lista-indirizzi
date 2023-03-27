@@ -8,7 +8,7 @@ namespace csharp_lista_indirizzi
 {
     public class Address
     {
-        public Address(string name, string surname, string street, string city, string province, string zip)
+        public Address(string name, string surname, string street, string city, string province, string zip, string secondName = "NA")
         {
             Name = name;
             Surname = surname;
